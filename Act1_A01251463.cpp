@@ -127,7 +127,7 @@ int main() {
         
     int contadorFactura = 0;
     
-    GeneraFactura(contadorFactura, arregloF, vecVendedor , i2, 32);
+    GeneraFactura(contadorFactura, arregloF, vecVendedor , arregloI[1], 32);
 
     // imprimimos todas las facturas
     cout << "Facturas Generadas "<< endl;
