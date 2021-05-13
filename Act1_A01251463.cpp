@@ -102,7 +102,7 @@ void GeneraFactura(int contadorFactura, Factura arregloF[], vector <Vendedor> &v
 
     Factura f1;
     f1.Cve_Vendedor = vecV[1].getClave();
-    f1.Cve_Articulo = i2.Cve_Articulo;
+    f1.Cve_Articulo = i2.getCve();
     f1.Cantidad = Cant;
     f1.NoFactura = "F" + GETDATE();
     arregloF[contadorFactura] = f1;
@@ -113,11 +113,6 @@ int main() {
     vector <Vendedor> vecVendedor;
     Inventario arregloI[4];
     Factura arregloF[5];
-
-    /*Vendedor v1 = {"v100","Don Julio Estrella el Grande"}; // variable v1, vendedor 1
-    Vendedor v2 = {"v200","Dona Esperanza Luna"};
-    arregloV[0] = v1;           // metiendo los vendedores al arreglo
-    arregloV[1] = v2;*/
 
     agregarVendedor(vecVendedor);
 
@@ -143,8 +138,8 @@ int main() {
 
     for (int j = 0; j <= contadorFactura; j++){
         for (int k = 0;k < sizeof(arregloI)/sizeof(arregloI[0]);k++){
-            if (arregloF[j].Cve_Articulo == arregloI[k].Cve_Articulo)
-                nombreArticulo = arregloI[k].Descripcion;
+            if (arregloF[j].Cve_Articulo == arregloI[k].getCve())
+                nombreArticulo = arregloI[k].getDes();
         }
         cout <<arregloF[j].NoFactura<<"\t"
             <<arregloF[j].Cve_Vendedor<<"\t\t"
