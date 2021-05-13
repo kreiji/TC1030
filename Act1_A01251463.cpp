@@ -78,11 +78,11 @@ void agregarArticulo(Inventario lista[]){
             cin >> No;
 
             for(int i=1;i<=No;i++){
-                    cout << "¿Cual es la clave del articulo " << i << " ?" << endl;
+                    cout << "¿Cual es la clave del articulo " << i << "?" << endl;
                     cin >> Cve;
-                    cout << "¿Cual es la descripcion del articulo " << i << " ?" << endl;
+                    cout << "¿Cual es la descripcion del articulo " << i << "?" << endl;
                     cin >> Des;
-                    cout << "¿Cual es el precio del articulo " << i << " ?" << endl;
+                    cout << "¿Cual es el precio del articulo " << i << "?" << endl;
                     cin >> Pre;
                     
                     cout << endl;
