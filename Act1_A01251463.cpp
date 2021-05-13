@@ -12,6 +12,23 @@ class Vendedor {                    // clase vendedor
 
 class Inventario {
     public:
+    string getCve(){return Cve_Articulo;}
+    string getDes(){return Descripcion;}
+    double getPre(){return Precio;}
+    
+    void setCve(string Clave){
+        Cve_Vendedor = Clave;
+    }
+    
+    void setDes(string Des){
+        Descripcion = Des;
+    }
+    
+    void setPre(double Pre){
+        Precio = Pre;
+    }
+    
+    private:
         string Cve_Articulo;
         string Descripcion;
         double Precio;
