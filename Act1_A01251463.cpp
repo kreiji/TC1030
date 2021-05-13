@@ -65,21 +65,21 @@ class Inventario {
     }
     
     void agregarArticulo(Inventario lista[]){
-            cout << "¿Cuántos articulos agregara?"
+            cout << "¿Cuántos articulos agregara?";
             int No;
             string Cve, Des;
             double Pre;
-            cin << No;
+            cin >> No;
 
-            for(i=1,i<=No,i++){
+            for(int i=1;i<=No;i++){
                     cout << "¿Cuál es la clave del articulo?" << endl;
                     cin >> Cve;
                     cout << "¿Cuál es la descripcion del articulo?" << endl;
                     cin >> Des;
                     cout << "¿Cuál es el precio del articulo?" << endl;
-                    cin << Pre;
+                    cin >> Pre;
 
-                    arregloI[i-1].setArticulo(Cve1,Des1,Pre1);
+                    lista[i-1].setArticulo(Cve,Des,Pre);
             }
     }    
         
@@ -122,7 +122,7 @@ int main() {
     Factura arregloF[5];
 
     agregarVendedor(vecVendedor);
-    agregarArticulo(arregloI[]);
+    agregarArticulo(arregloI);
         
         
     int contadorFactura = 0;
