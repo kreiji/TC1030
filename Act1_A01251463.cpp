@@ -54,6 +54,29 @@ void agregarVendedor(vector <Vendedor> &vecV){
 
 class Inventario {
     public:
+    string getCve(){return Cve_Articulo;}
+    string getDes(){return Descripcion;}
+    double getPre(){return Precio;}
+    
+    void setCve(string Clave){
+        Cve_Articulo = Clave;
+    }
+    
+    void setDes(string Des){
+        Descripcion = Des;
+    }
+    
+    void setPre(double Pre){
+        Precio = Pre;
+    }
+    
+    void setArticulo(string Clave, string Des, double Pre){
+        Cve_Articulo = Clave;
+        Descripcion = Des;
+        Precio = Pre;
+    }
+    
+    private:
         string Cve_Articulo;
         string Descripcion;
         double Precio;
@@ -98,9 +121,12 @@ int main() {
 
     agregarVendedor(vecVendedor);
 
-    Inventario i1 = {"i500","Tornillo sin fin",10.0};
-    Inventario i2 = {"i100","Pinon Cremallera",10.0};
-    Inventario i3 = {"i700","Angulo de Ackerman",10.0};
+    Inventario i1;
+        i1.setArticulo("i500","Tornillo sin fin",10.0);
+    Inventario i2;
+    i2.setArticulo("i100","Pinon Cremallera",10.0);
+    Inventario i3;
+    i3.setArticulo("i700","Angulo de Ackerman",10.0);
     arregloI[0] = i1;
     arregloI[1] = i2;
     arregloI[2] = i3;
