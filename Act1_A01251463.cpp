@@ -58,24 +58,31 @@ class Inventario {
     string getDes(){return Descripcion;}
     double getPre(){return Precio;}
     
-    void setCve(string Clave){
-        Cve_Articulo = Clave;
-    }
-    
-    void setDes(string Des){
-        Descripcion = Des;
-    }
-    
-    void setPre(double Pre){
-        Precio = Pre;
-    }
-    
     void setArticulo(string Clave, string Des, double Pre){
         Cve_Articulo = Clave;
         Descripcion = Des;
         Precio = Pre;
     }
     
+    void agregarArticulo(Inventario lista[]){
+            cout << "¿Cuántos articulos agregara?"
+            int No;
+            string Cve, Des;
+            double Pre;
+            cin << No;
+
+            for(i=1,i<=No,i++){
+                    cout << "¿Cuál es la clave del articulo?" << endl;
+                    cin >> Cve;
+                    cout << "¿Cuál es la descripcion del articulo?" << endl;
+                    cin >> Des;
+                    cout << "¿Cuál es el precio del articulo?" << endl;
+                    cin << Pre;
+
+                    arregloI[i-1].setArticulo(Cve1,Des1,Pre1);
+            }
+    }    
+        
     private:
         string Cve_Articulo;
         string Descripcion;
@@ -115,17 +122,9 @@ int main() {
     Factura arregloF[5];
 
     agregarVendedor(vecVendedor);
-
-    for(i=1,i<=3,i++){
-    cout << "¿Cuál es la clave del articulo?" << endl;
-    cin >> Cve1;
-    cout << "¿Cuál es la descripcion del articulo?" << endl;
-    cin >> Des1;
-    cout << "¿Cuál es el precio del articulo?" << endl;
-    cin << Pre1;
+    agregarArticulo(arregloI[]);
         
-    arregloI[i-1].setArticulo(Cve1,Des1,Pre1);
-    }
+        
     int contadorFactura = 0;
     
     GeneraFactura(contadorFactura, arregloF, vecVendedor , i2, 32);
