@@ -62,32 +62,34 @@ class Inventario {
         Cve_Articulo = Clave;
         Descripcion = Des;
         Precio = Pre;
-    }
-    
-    void agregarArticulo(Inventario lista[]){
-            cout << "¿Cuántos articulos agregara?";
-            int No;
-            string Cve, Des;
-            double Pre;
-            cin >> No;
-
-            for(int i=1;i<=No;i++){
-                    cout << "¿Cuál es la clave del articulo?" << endl;
-                    cin >> Cve;
-                    cout << "¿Cuál es la descripcion del articulo?" << endl;
-                    cin >> Des;
-                    cout << "¿Cuál es el precio del articulo?" << endl;
-                    cin >> Pre;
-
-                    lista[i-1].setArticulo(Cve,Des,Pre);
-            }
-    }    
+    }  
         
     private:
         string Cve_Articulo;
         string Descripcion;
         double Precio;
 };
+
+void agregarArticulo(Inventario lista[]){
+            cout << "¿Cuantos articulos agregara?" << endl;
+            int No;
+            string Cve, Des;
+            double Pre;
+            cin >> No;
+
+            for(int i=1;i<=No;i++){
+                    cout << "¿Cual es la clave del articulo " << i << " ?" << endl;
+                    cin >> Cve;
+                    cout << "¿Cual es la descripcion del articulo " << i << " ?" << endl;
+                    cin >> Des;
+                    cout << "¿Cual es el precio del articulo " << i << " ?" << endl;
+                    cin >> Pre;
+                    
+                    cout << endl;
+
+                    lista[i-1].setArticulo(Cve,Des,Pre);
+            }
+    }  
 
 class Factura {
     public:
@@ -118,7 +120,7 @@ void GeneraFactura(int contadorFactura, Factura arregloF[], vector <Vendedor> &v
 int main() {
 
     vector <Vendedor> vecVendedor;
-    Inventario arregloI[4];
+    Inventario arregloI[128];
     Factura arregloF[5];
 
     agregarVendedor(vecVendedor);
