@@ -17,7 +17,7 @@ class Inventario {
     double getPre(){return Precio;}
     
     void setCve(string Clave){
-        Cve_Vendedor = Clave;
+        Cve_Articulo = Clave;
     }
     
     void setDes(string Des){
@@ -25,6 +25,12 @@ class Inventario {
     }
     
     void setPre(double Pre){
+        Precio = Pre;
+    }
+    
+    void setArticulo(string Clave, string Des, double Pre){
+        Cve_Articulo = Clave;
+        Descripcion = Des;
         Precio = Pre;
     }
     
@@ -71,9 +77,12 @@ int main() {
     arregloV[0] = v1;           // metiendo los vendedores al arreglo
     arregloV[1] = v2;
 
-    Inventario i1 = {"i500","Tornillo sin fin",10.0};
-    Inventario i2 = {"i100","Pinon Cremallera",10.0};
-    Inventario i3 = {"i700","Angulo de Ackerman",10.0};
+    Inventario i1;
+        i1.setArticulo("i500","Tornillo sin fin",10.0);
+    Inventario i2;
+    i2.setArticulo("i100","Pinon Cremallera",10.0);
+    Inventario i3;
+    i3.setArticulo("i700","Angulo de Ackerman",10.0);
     arregloI[0] = i1;
     arregloI[1] = i2;
     arregloI[2] = i3;
