@@ -116,7 +116,7 @@ int main() {
 
     agregarVendedor(vecVendedor);
 
-    Inventario i1;
+    for(i=1,i<=3,i++){
     cout << "¿Cuál es la clave del articulo?" << endl;
     cin >> Cve1;
     cout << "¿Cuál es la descripcion del articulo?" << endl;
@@ -124,16 +124,8 @@ int main() {
     cout << "¿Cuál es el precio del articulo?" << endl;
     cin << Pre1;
         
-    i1.setArticulo(Cve1,Des1,Pre1);
-    
-    //Inventario i2;
-    //i2.setArticulo("i100","Pinon Cremallera",10.0);
-    //Inventario i3;
-    //i3.setArticulo("i700","Angulo de Ackerman",10.0);
-    arregloI[0] = i1;
-    //arregloI[1] = i2;
-    //arregloI[2] = i3;
-
+    arregloI[i-1].setArticulo(Cve1,Des1,Pre1);
+    }
     int contadorFactura = 0;
     
     GeneraFactura(contadorFactura, arregloF, vecVendedor , i2, 32);
