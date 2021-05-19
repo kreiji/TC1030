@@ -97,7 +97,7 @@ void crearAlumno(Estudiante lista[]){
     int n = 0;
     string nombreTemp, carreraTemp;
     int edadTemp;
-    cout << "Cuántos desea agregar?" << endl;
+    cout << "Cuántos alumnos desea agregar?" << endl;
     cin >> n;
 
     for (int i = 0; i<=n ; i++){
@@ -120,7 +120,7 @@ void crearMaestro(Maestro lista[]){
     int n = 0;
     string nombreTemp, deptoTemp;
     int edadTemp;
-    cout << "Cuántos desea agregar?" << endl;
+    cout << "Cuántos maestros desea agregar?" << endl;
     cin >> n;
 
     for (int i = 0; i<=n ; i++){
