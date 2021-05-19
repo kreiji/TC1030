@@ -42,7 +42,7 @@ Estudiante::Estudiante() : Persona() {
     carrera = "none";
 };
 
-Estudiante::Estudiante(string n, int e, string c) : Persona(n, e) {
+Estudiante::Estudiante(string n, int e, string c) : Persona() {
     name = n;
     age = e;
     carrera = c;
@@ -74,7 +74,7 @@ Maestro::Maestro() : Persona() {
     carrera = "none";    
 };
 
-Maestro::Maestro(string n, int e, string d) : Persona(n, e) {
+Maestro::Maestro(string n, int e, string d) : Persona() {
     name = n;
     age = e;
     depto = d;
