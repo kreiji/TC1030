@@ -1,5 +1,9 @@
 // María Carelia Ibarra Vásquez
 // A01251463
+
+//Fernando Gonzalez Rosas
+//A01253694
+
 // 5/17/2021
 // TC1030.700
 
@@ -89,7 +93,58 @@ void Maestro::muestraDatos() {
     cout << name <<"  "<< age << "  "<< depto << endl;
 }
 
-int main() {
+void crearAlumno(Estudiante lista[]){
+    int n = 0;
+    string nombreTemp, carreraTemp;
+    int edadTemp;
+    cout << "Cuántos desea agregar?" << endl;
+    cin >> n;
 
+    for (int i = 0; i<=n ; i++){
+        cout << "¿Cuál es el nombre del alumno " << i << "?"<< endl;
+        cin >> nombreTemp;
+        cout << endl << endl;
+        cout << "¿Cuál es la edad del alumno " << i << "?"<< endl;
+        cin >> edadTemp;
+        cout << endl << endl;
+        cout << "¿Cuál es la carrera del alumno " << i << "?"<< endl;
+        cin >> carreraTemp;
+        cout << endl << endl;
+
+        lista[i] = Estudiante(nombreTemp, edadTemp, carreraTemp);
+
+    }
+}
+
+void crearMaestro(Maestro lista[]){
+    int n = 0;
+    string nombreTemp, deptoTemp;
+    int edadTemp;
+    cout << "Cuántos desea agregar?" << endl;
+    cin >> n;
+
+    for (int i = 0; i<=n ; i++){
+        cout << "¿Cuál es el nombre del maestro " << i << "?"<< endl;
+        cin >> nombreTemp;
+        cout << endl << endl;
+        cout << "¿Cuál es la edad del maestro " << i << "?"<< endl;
+        cin >> edadTemp;
+        cout << endl << endl;
+        cout << "¿Cuál es la carrera del maestro " << i << "?"<< endl;
+        cin >> deptoTemp;
+        cout << endl << endl;
+
+        lista[i] = Maestro(nombreTemp, edadTemp, deptoTemp);
+
+    }
+}
+
+int main() {
+    Estudiante listaEstiante[2^31];
+    Maestro listaMaestro[2^31];
+
+    crearAlumno(listaEstiante);
+    crearMaestro(listaMaestro);
+    
     return 0;
 }
