@@ -6,6 +6,7 @@ Este repositorio será utilizado para los trabajos de la materia TC1030 Programa
 
 - María Carelia Ibarra Vásquez A01251463 ITC
 - Fernando González Rosas A01253694 IDM
+- Alejandra Margarita Castro Amarillas A01253828 ITC
 
 ## Contenidos
 
