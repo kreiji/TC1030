@@ -123,11 +123,6 @@ void crearMaestro() {
     int n = 0;
     string nombreTemp, deptoTemp;
     int edadTemp;
-    
-void crearMaestro() {
-    int n = 0;
-    string nombreTemp, deptoTemp;
-    int edadTemp;
     cantidadMaestros = n;
     for (int i = 0; i < n; i++) {
         cout << "¿Cual es el nombre del maestro " << i +1<< "?" << endl;
