@@ -106,7 +106,7 @@ Maestro listaMaestro[100];
 int cantidadMaestros = 0;
 int cantidadEstudiante = 0;
 //LAS FUNCIONES HACEN REFERENCIA A LAS FUNCIONES GLOBALES PARA GUARDAR LOS DATOS
-void crearAlumno() {
+void crearAlumno(Estudiante listaEstudiante[]) {
     int n = 0;
     string nombreTemp, carreraTemp;
     int edadTemp;
@@ -129,7 +129,7 @@ void crearAlumno() {
 }
 
 
-void crearMaestro() {
+void crearMaestro(Maestro listaMaestro[]) {
     int n = 0;
     string nombreTemp, deptoTemp;
     int edadTemp;
@@ -152,14 +152,14 @@ void crearMaestro() {
 }
 
 
-void MostrarEstudiantes() {
+void MostrarEstudiantes(Estudiante listaEstudiante[]) {
     for (int i = 0; i < cantidadEstudiante; i++)
     {
         listaEstudiante[i].muestraDatos();
         cout << endl;
     }
 }
-void MostrarMaestros() {
+void MostrarMaestros(Maestro listaMaestro[]) {
     for ( int i = 0; i <cantidadMaestros; i++)
     {
         listaMaestro[i].muestraDatos();
@@ -168,14 +168,18 @@ void MostrarMaestros() {
 
 int main() {
     int n;
-    crearAlumno();
+    Estudiante listaEstudiante[2^31];
+    Maestro listaMaestro[2^31];
+    
+    crearAlumno(listaEstudiante);
     system("cls");
-    crearMaestro();
+    crearMaestro(listaMaestro);
     system("cls");
+    
     cout << "Lista de Estudiantes" << endl;
-    MostrarEstudiantes();
+    MostrarEstudiantes(listaEstudiante);
     cout << "=======================================================" << endl;
     cout << "Lista de Maestros" <<endl;
-    MostrarMaestros();
+    MostrarMaestros(listaMaestro);
 
 }
