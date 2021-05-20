@@ -1,3 +1,15 @@
+// María Carelia Ibarra Vásquez
+// A01251463
+
+//Fernando Gonzalez Rosas
+//A01253694
+
+//Alejandra Margarita Castro Amarillas 
+//A01253828
+
+// 5/17/2021
+// TC1030.700
+
 # include <iostream>
 #include<windows.h>
 using namespace std;
