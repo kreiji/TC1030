@@ -1,19 +1,9 @@
-// María Carelia Ibarra Vásquez
-// A01251463
-//Fernando Gonzalez Rosas
-//A01253694
-
-//Alejandra Margarita Castro Amarillas 
-//A01253828
-
-// 5/17/2021
-// TC1030.700
-
 # include <iostream>
 #include<windows.h>
 using namespace std;
 
 class Persona {
+
 protected:
     string name;
     int age;
@@ -25,9 +15,12 @@ public:
 string Persona::getName() {
     return name;
 }
+
 int Persona::getAge() {
     return age;
 }
+
+
 
 
 class Estudiante :Persona {
@@ -41,24 +34,28 @@ public:
 private:
     string carrera;
 };
+
 Estudiante::Estudiante(){
     name = "nobody";
     age = 0;
     carrera = "none";
 };
+
 Estudiante::Estudiante(string n, int e, string c) {
     name = n;
     age = e;
     carrera = c;
 }
+
 string Estudiante::getCarrera() {
     return carrera;
 }
 
 void Estudiante::muestraDatos() {
-        cout << "Nombre Edad  Carrera" << endl;
+    cout << "Nombre Edad  Carrera" << endl;
     cout << name << "  " << age << "   " << carrera << endl;
 }
+
 class Maestro : public Persona {
 public:
     Maestro();
@@ -81,6 +78,7 @@ Maestro::Maestro(string n, int e, string d) : Persona() {
     age = e;
     depto = d;
 };
+
 string Maestro::getDepto() {
     return depto;
 }
@@ -95,13 +93,11 @@ Estudiante listaEstudiante[100];
 Maestro listaMaestro[100];
 int cantidadMaestros = 0;
 int cantidadEstudiante = 0;
-
 //LAS FUNCIONES HACEN REFERENCIA A LAS FUNCIONES GLOBALES PARA GUARDAR LOS DATOS
 void crearAlumno() {
     int n = 0;
     string nombreTemp, carreraTemp;
     int edadTemp;
-
     cout << "Cuantos alumnos desea agregar?" << endl;
     cin >> n;
     cantidadEstudiante = n;
@@ -115,14 +111,18 @@ void crearAlumno() {
         cout << "¿Cual es la carrera del alumno " << i +1<< "?" << endl;
         cin >> carreraTemp;
         cout << endl << endl;
+
         listaEstudiante[i] = Estudiante(nombreTemp, edadTemp, carreraTemp);
     }
 }
+
 
 void crearMaestro() {
     int n = 0;
     string nombreTemp, deptoTemp;
     int edadTemp;
+    cout << "Cuantos maestros desea agregar?" << endl;
+    cin >> n;
     cantidadMaestros = n;
     for (int i = 0; i < n; i++) {
         cout << "¿Cual es el nombre del maestro " << i +1<< "?" << endl;
@@ -134,9 +134,11 @@ void crearMaestro() {
         cout << "¿Cual es la carrera del maestro " << i +1<< "?" << endl;
         cin >> deptoTemp;
         cout << endl << endl;
+
         listaMaestro[i] = Maestro(nombreTemp, edadTemp, deptoTemp);
     }
 }
+
 
 void MostrarEstudiantes() {
     for (int i = 0; i < cantidadEstudiante; i++)
@@ -164,4 +166,4 @@ int main() {
     cout << "Lista de Maestros" <<endl;
     MostrarMaestros();
 
-} 
+}
